@@ -2,7 +2,7 @@
 
 A robust NestJS-based image processing service with background job processing using BullMQ. Upload images and get them automatically processed with resizing, compression, and thumbnail generation.
 
-## 🚀 Features
+## Features
 
 - **Image Upload**: Upload images via REST API (JPEG, PNG, GIF, WebP)
 - **Background Processing**: Asynchronous image processing using BullMQ and Redis
@@ -14,14 +14,14 @@ A robust NestJS-based image processing service with background job processing us
 - **Result Retrieval**: Get URLs to all processed images
 - **Dockerized**: Complete Docker setup for easy deployment
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Docker** (version 20.10 or higher)
 - **Docker Compose** (version 2.0 or higher)
 
 That's it! Everything else runs in containers.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **NestJS** - Progressive Node.js framework
 - **BullMQ** - Background job processing
@@ -31,7 +31,7 @@ That's it! Everything else runs in containers.
 - **TypeORM** - Database ORM
 - **Docker** - Containerization
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository:**
 ```bash
@@ -49,7 +49,7 @@ This will start:
 - **Redis** on port 6379
 - **NestJS API** on port 3000
 
-## 🎯 Usage
+## Usage
 
 ### Start Services
 ```bash
@@ -72,7 +72,7 @@ docker-compose down
 docker-compose down -v
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### 1. Upload Image
 Upload an image file for processing.
@@ -174,7 +174,7 @@ http://localhost:3000/files/uploads/processed/compressed/550e8400-e29b-41d4-a716
 http://localhost:3000/files/uploads/processed/thumbnails/550e8400-e29b-41d4-a716-446655440000_thumb.jpg
 ```
 
-## 🐳 Docker Architecture
+## Docker Architecture
 
 ### Services
 
@@ -214,7 +214,7 @@ DB_NAME=image_processing
 NODE_ENV=development
 ```
 
-## 🔧 Development
+## Development
 
 ### Hot Reload
 Source code changes are automatically detected thanks to volume mounting:
@@ -246,7 +246,7 @@ docker-compose exec postgres psql -U postgres -d image_processing
 docker-compose exec redis redis-cli
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Complete Workflow Test
 
@@ -286,7 +286,7 @@ http://localhost:3000/files/uploads/processed/compressed/{filename}
 http://localhost:3000/files/uploads/processed/thumbnails/{filename}
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Redis Connection Issues
 ```bash
@@ -350,7 +350,7 @@ docker system prune -a
 docker-compose up --build
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 image-processing-api/
@@ -381,7 +381,7 @@ image-processing-api/
 └── package.json                   # Dependencies
 ```
 
-## 📝 Image Processing Details
+## Image Processing Details
 
 ### Resize
 - **Target:** 1200px width
@@ -401,17 +401,17 @@ image-processing-api/
 - **Position:** Center
 - **Crop:** Yes (to maintain aspect ratio)
 
-## 🔐 Security Notes
+## Security Notes
 
 - File size limited to 10MB
 - Only image MIME types accepted
 - Filenames are UUID-based to prevent conflicts
 - CORS enabled for development (configure for production)
 
-## 📄 License
+## License
 
 UNLICENSED
 
-## 👤 Author
+## Author
 
-Backend Engineering Assessment Project
+Big Lens
