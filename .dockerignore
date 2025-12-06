@@ -1,0 +1,15 @@
+node_modules
+dist
+uploads
+database.sqlite
+.env
+.git
+.gitignore
+README.md
+.eslintrc.js
+.prettierrc
+npm-debug.log
+yarn-error.log
+*.md
+.vscode
+.idea
